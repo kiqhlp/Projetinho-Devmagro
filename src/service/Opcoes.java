@@ -1,15 +1,16 @@
 package service;
 
 public class Opcoes {
-	
-	public static void opcoes (){
+
+	public static void opcoes() {
 		int i = Menu.menu();
-		
+
 		switch (i) {
 		case 1:
 			Cadastro.cadastro();
 			break;
 		case 2:
+			Busca.busca();
 			break;
 		case 3:
 			break;
@@ -24,7 +25,8 @@ public class Opcoes {
 			Opcoes.opcoes();
 			break;
 		}
-		
+
 	}
+
 
 }

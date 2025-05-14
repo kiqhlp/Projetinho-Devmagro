@@ -1,5 +1,8 @@
 package entities;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import entities.enums.Sexo;
 import entities.enums.Tipo;
 
@@ -12,7 +15,9 @@ public class Pet {
 	private Double peso;
 	private String raca;
 	
-	public Pet () {
+	private List<Pet> pets = new ArrayList<>();
+	
+	public Pet() {
 		}
 
 	public Pet(String name, Tipo tipo, Sexo sexo, String endereco, Double idade, Double peso, String raca) {
@@ -73,6 +78,13 @@ public class Pet {
 	} 
 	public void setRaca(String raca) {
 		this.raca = raca;
+	}
+	
+	public void addPet(Pet pet) {
+		pets.add(pet);
+	}
+	public void remove(Pet pet) {
+		pets.remove(pet);
 	}
 	
 	//Métodos	

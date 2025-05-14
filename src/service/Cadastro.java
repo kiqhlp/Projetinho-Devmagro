@@ -156,6 +156,7 @@ public class Cadastro {
 					Opcoes.opcoes();
 				} else {
 					Pet pet = new Pet(name, tipo, sexo, end, age, peso, raca);
+					pet.addPet(pet);
 					System.out.println("Novo Pet Cadastrado!");
 				}
 
