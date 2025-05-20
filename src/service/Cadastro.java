@@ -3,6 +3,7 @@ package service;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.List;
 import java.util.Scanner;
 
 import entities.Pet;
@@ -12,6 +13,7 @@ import entities.enums.Tipo;
 public class Cadastro {
 
 	public static void cadastro() {
+		List<Pet> pets = null;
 		Scanner sc = new Scanner(System.in);
 		String path = "C:\\Users\\kiqhl\\Documents\\Estudos de Programação\\Udemy\\Java Nélio Alves\\ws_eclipse\\projetinho_cadastro\\Projetinho\\formulario.txt";
 		String name, ni, end, ncasa, cidade, rua, confirmacao, raca, pesostr, agestr;
@@ -153,7 +155,7 @@ public class Cadastro {
 				String confirmacaoFinal = sc.nextLine();
 				if (!confirmacaoFinal.equals("s")) {
 					System.out.println("CADASTRO CANCELADO");
-					Opcoes.opcoes();
+					Opcoes.opcoes(pets);
 				} else {
 					Pet pet = new Pet(name, tipo, sexo, end, age, peso, raca);
 					pet.addPet(pet);

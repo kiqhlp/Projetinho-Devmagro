@@ -1,8 +1,12 @@
 package service;
 
+import java.util.List;
+
+import entities.Pet;
+
 public class Opcoes {
 
-	public static void opcoes() {
+	public static void opcoes(List<Pet> pets) {
 		int i = Menu.menu();
 
 		switch (i) {
@@ -10,7 +14,7 @@ public class Opcoes {
 			Cadastro.cadastro();
 			break;
 		case 2:
-			Busca.busca();
+			Busca.busca(pets);
 			break;
 		case 3:
 			break;
@@ -22,7 +26,7 @@ public class Opcoes {
 			break;
 		default:
 			System.out.println("VALOR INVÁLIDO!");
-			Opcoes.opcoes();
+			Opcoes.opcoes(pets);
 			break;
 		}
 
